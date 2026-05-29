@@ -1,6 +1,7 @@
 /* This software is licensed under the MIT License: https://github.com/spacehuhntech/esp8266_deauther */
 
 #include "wifi.h"
+#include "custom_mac.h"
 
 extern "C" {
     #include "user_interface.h"
@@ -262,6 +263,10 @@ namespace wifi {
     void startAP() {
         WiFi.softAPConfig(ip, ip, netmask);
         WiFi.softAP(ap_settings.ssid, ap_settings.password, ap_settings.channel, ap_settings.hidden);
+
+        extern uint8_t defaultNewMAC[6]; // 声明外部变量（在 ino 里定义的那个）
+        wifi_set_macaddr(SOFTAP_IF, ::defaultNewMAC);
+
 
         dns.setErrorReplyCode(DNSReplyCode::NoError);
         dns.start(53, "*", ip);
