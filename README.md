@@ -4,6 +4,7 @@
 
 **Scan for WiFi devices, block selected connections, create dozens of networks and confuse WiFi scanners.**
 
+在原项目基础上修改默认wifi名及密码，esp8266_deauther.ino内增加固件内置APMAC修改，原网页内修改APMAC无效。
 ## New Documentation
 
 Hi 👋  
