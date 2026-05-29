@@ -18,7 +18,7 @@ Here are some quick links:
 
 ## Password
 
-The password for `pwned` is `deauther`
+The password for `CMCC-FTTR-0A-5G` is `1234567890`
 
 ## About this Project
 
