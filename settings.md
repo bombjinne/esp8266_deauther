@@ -36,12 +36,12 @@ Version number, i.e. `v2.0`.
 **PLEASE NOTE** that this setting can only be changed in the source code.  
 
 ## SSID
-`String ssid = "pwned";`  
+`String ssid = "CMCC-FTTR-0A-5G";`  
 SSID of access point used for the web interface (if enabled).  
 The length must be between 1 and 31 characters.  
 
 ## PASSWORD
-`String password = "deauther";`  
+`String password = "1234567890";`  
 Password of access point used for the web interface (if enabled).  
 The length must be between 8 and 31 characters.  
 
@@ -58,7 +58,7 @@ Hides the access point that is used for the web interface (if enabled).
 Enables captive portal for access point (if enabled).  
 
 ## LANG
-`String lang = "en";`  
+`String lang = "cn";`  
 Default language for the web interface.  
 Be sure the language file exists!  
 
