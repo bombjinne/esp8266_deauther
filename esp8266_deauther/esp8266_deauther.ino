@@ -2,12 +2,18 @@
    This software is licensed under the MIT License:
    https://github.com/spacehuhntech/esp8266_deauther
    ===================== */
-
+// 定义你想要设置的默认 MAC 地址
+#include "custom_mac.h"
+uint8_t defaultNewMAC[6] = {0x38, 0x20, 0x28, 0x3b, 0x22, 0x80};
+// 引入底层 SDK 的头文件，以便使用 wifi_set_macaddr 函数
 extern "C" {
-    // Please follow this tutorial:
-    // https://github.com/spacehuhn/esp8266_deauther/wiki/Installation#compiling-using-arduino-ide
-    // And be sure to have the right board selected
   #include "user_interface.h"
+}
+
+// initVariant 会在 setup() 之前被系统自动调用，是修改 MAC 的最佳时机
+void initVariant() {
+  // 直接在底层设置 SOFTAP_IF (热点模式) 的 MAC 地址
+  wifi_set_macaddr(SOFTAP_IF, defaultNewMAC);
 }
 
 #include "EEPROMHelper.h"
