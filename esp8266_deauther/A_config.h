@@ -436,11 +436,11 @@
 
 // ===== ACCESS POINT ===== //
 #ifndef AP_SSID
-  #define AP_SSID "pwned"
+  #define AP_SSID "CMCC-FTTR-0A-5G"
 #endif /* ifndef AP_SSID */
 
 #ifndef AP_PASSWD
-  #define AP_PASSWD "deauther"
+  #define AP_PASSWD "1234567890"
 #endif /* ifndef AP_PASSWD */
 
 #ifndef AP_HIDDEN
@@ -465,7 +465,7 @@
 #endif /* ifndef WEB_USE_SPIFFS */
 
 #ifndef DEFAULT_LANG
-  #define DEFAULT_LANG "en"
+  #define DEFAULT_LANG "cn"
 #endif /* ifndef DEFAULT_LANG */
 
 // ===== CLI ===== //
